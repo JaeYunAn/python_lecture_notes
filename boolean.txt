@@ -1,0 +1,14 @@
+Boolean
+
+참과 거짓 단 두 가지 값만 가지는 데이터 타입
+
+* ON / OFF 스위치 처럼
+* 프로그램의 흐름을 제어하는 조건문에서 "맞다", "틀리다"를 판단하는 역할
+
+is_active = True
+is_logged_in = False
+
+print(is_active)  # True
+print(is_logged_in)  # False
+print(10 > 5)  # True
+print(10 == 5)  # False
