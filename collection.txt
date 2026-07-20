@@ -1,0 +1,16 @@
+Collection
+
+여러 개의 값을 하나로 묶어 관리하는 자료형을 통칭함
+
+* 여러 물건을 담는 '보관함'과 같다
+* str, list, tuple, range, set, dict 데이터 타입이 모두 collection에 분류됨
+
+컬렉션명          변경 가능 여부         순서 존재 여부
+str                    X                     O
+list                   O                     O
+tuple                  X                     O
+dict                   O                     X
+set                    O                     X
+
+*** 시퀀스: str, list, tuple
+*** 비시퀀스: dict, set
