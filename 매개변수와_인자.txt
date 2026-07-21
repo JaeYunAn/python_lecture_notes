@@ -1,0 +1,93 @@
+매개변수(parameter)
+함수를 정의할 때 함수가 받을 값을 나타내는 변수
+
+인자(argument)
+함수를 호출할 때 실제로 전달되는 값
+
+def add_numbers(x, y):  # x와 y는 매개변수
+    result = x + y
+    retrun result
+
+a = 2
+b = 3
+
+sum_result = add_numbers(a, b)    # a와 b는 인자
+print(sum_result)
+
+
+다양한 인자
+1. 위치 인자
+2. 기본 인자 값
+3. 키워드 인자
+4. 임의의 인자 목록
+5. 임의의 키워드 인자 목록
+
+
+1. 위치 인자(Positional Arguments)
+* 함수 호출 시 인자의 위치에 따라 전달되는 인자
+* 위치 인자는 함수 호출 시 반드시 값을 전달해야 함
+
+def greet(name, age):
+    print(f'안녕하세요, {name}님! {age}살이시군요.')
+
+greet('Alice', 25)    # 안녕하세요 Alice님! 25살이시군요.
+greet(25, 'Alice')    # 안녕하세요 25님! Alice살이시군요.
+greet('Alice')    # TypeError: greet() missing 1 required positional argument: 'age'
+
+
+2. 기본 인자 값(Default Argument Values)
+* 함수 정의에서 매개변수에 기본 값을 할당하는 것
+* 함수 호출 시 인자를 전달하지 않으면, 기본값이 매개변수에 할당됨
+
+def greet(name, age = 30)
+    print(f'안녕하세요, {name}님! {age}살이시군요.')
+
+greet('Bob')    # 안녕하세요, Bob님! 30살이시군요.
+greet('Charlie', 40)    # 안녕하세요, Charlie님! 40살이시군요.
+
+
+3. 키워드 인자(Keyword Arguments)
+* 함수 호출 시 인자의 이름과 함께 값을 전달하는 인자
+* 매개변수와 인자를 일치시키지 않고, 특정 매개변수에 값을 할당할 수 있음
+*인자의 순서는 중요하지 않다, 인자의 이름을 명시하여 전달한다.
+*** 단, 호출 시 키워드 인자는 위치 인자 뒤에 위치해야 함.
+*** 위치 인자는 첫 번째, 두 번째라는 순서에 따라 값이 전달
+*** 키워드 인자는 순서를 무시하고 이름을 직접 지정함
+*** 이미 키워드 인자로 순서가 깨진 상황에서 다시 위치 인자를 던지면 컴퓨터는 이 값이 어느 자리에 들어가야 하는지 판단 못함
+
+def greet(name, age):
+    print(f'안녕하세요, {name}님! {age}살이시군요.')
+
+greet(name = 'Dave', age = 35)    # 안녕하세요, Dave님! 35살이시군요.
+greet(age = 35, name = 'Dave')    # 안녕하세요, Dave님! 35살이시군요.
+
+greet(age = 35, 'Dave')   # positional argument follows Keyword argument
+
+
+4. 임의의 인자 목록(Arbitrary Arguments Lists)
+* 정해지지 않은 개수의 인자를 처리하는 인자
+* 함수 정의시 매개변수 앞에 '*'를 붙여 사용
+* 여러 개의 인자를 tuple로 처리
+
+def calculate_sum(*args):
+    print(args)   # (1, 100, 5000, 30)
+    print(type(args))   # <class 'tuple'>
+
+calculate_sum(1, 100, 5000, 30)
+
+
+5. 임의의 키워드 인자 목록(Arbitrary Keyword Argument Lists)
+* 정해지지 않은 개수의 키워드 인자를 처리하는 인자
+* 함수 정의시 매개변수 앞에 '**'를 붙여 사용
+* 여러 개의 인자를 dictionary로 묶어서 처리
+
+def print_info(**kwargs)
+    print(kwargs)
+
+print_info(name = 'Eve', age = 30)    # {'name': 'Eve', 'age': 30}
+
+
+*** 함수 인자 권장 작성 순서
+    위치 -> 기본 -> 가변 -> 가변 키워드
+* 호출 시 인자를 전달하는 과정에서 혼란을 줄일 수 있음
+* 절대적인 규칙은 아님
