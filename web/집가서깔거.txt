@@ -1,0 +1,3 @@
+auto rename tag
+open in browser
+black formatter
