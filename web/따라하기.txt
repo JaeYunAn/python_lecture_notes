@@ -8,3 +8,13 @@ pip install jupyter ipykernel ipywidgets -> 엔터 꾸욱
 파워쉘 관리자 권한으로 다시 실행
 python -m notebook -> 엔터 꾸욱
 그러면 다시 주피터 노트북 창 뜨게됨
+
+
+이거 먼저 해야댐
+파이썬 홈페이지에서 파이썬 3.12 설치
+download의 windows 눌러서 3.12.7 windows installer(64bit)
+path 추가 체크, disable뭐시기 체크
+시스템 환경변수 path들어가서 312있나 확인
+그후 파워쉘 다시 켜서
+python --version -> 3. 12. 7 나오면
+pip install jupyter ipykernel ipywidgets -> 엔터 꾸욱
