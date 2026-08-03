@@ -1,0 +1,10 @@
+파워쉘 키기
+python --version -> Python 3.11.9 인지 확인
+그 후
+pip install jupyter ipykernel ipywidgets -> 엔터 꾸욱
+다 끝나면 clear -> 엔터 꾸욱
+화면 다시 초기화 되면 python -m notebook -> 엔터 꾸욱
+파워쉘 컨트롤 c누르고 닫기
+파워쉘 관리자 권한으로 다시 실행
+python -m notebook -> 엔터 꾸욱
+그러면 다시 주피터 노트북 창 뜨게됨
