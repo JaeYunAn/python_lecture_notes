@@ -1,20 +1,7 @@
-파워쉘 키기
-python --version -> Python 3.11.9 인지 확인
-그 후
-pip install jupyter ipykernel ipywidgets -> 엔터 꾸욱
-다 끝나면 clear -> 엔터 꾸욱
-화면 다시 초기화 되면 python -m notebook -> 엔터 꾸욱
-파워쉘 컨트롤 c누르고 닫기
-파워쉘 관리자 권한으로 다시 실행
-python -m notebook -> 엔터 꾸욱
-그러면 다시 주피터 노트북 창 뜨게됨
-
-
-이거 먼저 해야댐
-파이썬 홈페이지에서 파이썬 3.12 설치
-download의 windows 눌러서 3.12.7 windows installer(64bit)
-path 추가 체크, disable뭐시기 체크
-시스템 환경변수 path들어가서 312있나 확인
-그후 파워쉘 다시 켜서
-python --version -> 3. 12. 7 나오면
-pip install jupyter ipykernel ipywidgets -> 엔터 꾸욱
+신민석 강사님 깃랩 풀땡기기
+그리고 파일 하나 새로 만들기 (AI_python)
+그 안에다 requirements.txt랑 실습 파일 집어넣기
+주피터 노트북으로 켜서 제일 위에 코드 하나 넣기
+!pip install -r requirements.txt -> 엔터 
+그 밑에 코드에
+!pip install jedi -> 엔터
